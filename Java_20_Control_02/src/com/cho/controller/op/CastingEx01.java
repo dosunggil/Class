@@ -1,6 +1,6 @@
 package com.cho.controller.op;
 
-public class CasCading_01 {
+public class CastingEx01 {
 
 	public static void main(String[] args) {
 
@@ -13,7 +13,7 @@ public class CasCading_01 {
 		 * 크기(저장공간)가 작은 type의 변수에 
 		 * 크기가 큰 type의 변수값을 복사 대입하는 경우에는
 		 * 값을 잃을 수 있다.
-		 * 해서 저장하려 할땐 강제 형 변환(CasCading)을 해주어야 한다.
+		 * 해서 저장하려 할땐 강제 형 변환(Casting)을 해주어야 한다.
 		 * 강제 형 변환을 수행했을 때 예측할 수 없는 결과가 나올 수 있고,
 		 * 그 책임은 개발자 몫이다.
 		 */
