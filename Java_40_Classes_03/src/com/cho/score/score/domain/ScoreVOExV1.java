@@ -1,6 +1,6 @@
 package com.cho.score.score.domain;
 
-public class ScoreVOv2 {
+public class ScoreVOExV1 {
 
 	private String stName;
 	private int intKor;

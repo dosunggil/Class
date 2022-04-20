@@ -5,10 +5,9 @@ import com.cho.score.utills.Line;
 
 public class ScoreServiceV1 {
 
-	private ScoreVOv2[] scores;
+	protected ScoreVOv2[] scores;
 	
 	public ScoreServiceV1() {
-		this(10);
 	}
 	
 	public ScoreServiceV1(int i) { //새로운 배열을 선언하고, 그 배열의 길이를 input하고, 그 배열을 초기화
@@ -64,14 +63,7 @@ public class ScoreServiceV1 {
 			System.out.printf("%3.2f\n",scores[i].getfAvg());
 		}
 		
-		System.out.println(Line.dLine(50));
-		int[] intEx = new int[scores.length];
-		for (int n = 0 ; n < intEx.length;n++ ) {
-			for (int k = 0 ; k < scores.length; k++) {
-				intEx[n] += scores[k];
-			}
-			
-		}
+	
 	
 	}
 	
