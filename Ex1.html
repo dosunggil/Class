@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding : 0;
+        margin : 0;
+        box-sizing: border-box;
+    }
+    header {
+        background-color: #6969d3;
+        color : white;
+        text-align: center;
+        padding : 30px;
+        font-weight: 500;
+    }
+    section {
+        margin : 0 auto;
+        width:100vw;
+    }
+    nav {
+        background-color: gray;
+        border-radius: 10px;
+        padding : 0 100px;
+    }
+    nav ul {
+        display : flex;
+        list-style-type: none;
+
+    }
+    nav ul li {
+        margin : 16px 18px;
+        color:white;
+    }
+    nav ul li:hover {
+        cursor: pointer;
+        color : black;
+    }
+    nav ul li:last-child {
+        margin-left : auto;
+    }
+    section {
+        padding : 20px 40px;
+    }
+    table {
+        border-collapse: collapse;
+        width:100%;
+      
+    
+    }
+    table thead td {
+        background-color: #ccc;
+    }
+    table td {
+        border-top : 1px solid #c2bcbc;
+        text-align: center;
+        padding : 5px 0;
+    }
+    table tbody tr:last-child {
+        border-bottom : 1px solid #c2bcbc;
+    }
+    #button {
+        float : right;
+        margin :15px 0;
+    }
+    #button input {
+        background-color: #6969d3;
+        border : 0;
+        outline: 0;
+
+        padding : 5px 10px;
+        border-radius: 5px;
+        color : white;
+    }
+    #button input:hover {
+        cursor: pointer;
+    }
+
+
+</style>
+<body>
+    <header>
+        <h1>학사관리 v1</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>HOME</li>
+            <li>학생정보</li>
+            <li>성적일람표</li>
+            <li>로그인</li>
+        </ul>
+    </nav>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <td>학번</td>
+                    <td>이름</td>
+                    <td>전공</td>
+                    <td>학년</td>
+                    <td>주소</td>
+                    <td>전화번호</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20210001</td>
+                    <td>홍길동</td>
+                    <td>컴퓨터공학</td>
+                    <td>2</td>
+                    <td>서울시 동대문구</td>
+                    <td>010-010-0101</td>
+                </tr>
+                <tr>
+                    <td>20210002</td>
+                    <td>조운천</td>
+                    <td>수학</td>
+                    <td>3</td>
+                    <td>전라북도 익산시</td>
+                    <td>010-010-0101</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="button"><input type="button" value="학생정보 추가"></div>
+    </section>
+</body>
+</html>
