@@ -11,6 +11,11 @@ import com.cho.score.controller.domain.StudentVO;
  */
 public interface StudentService {
 
+	/*
+	 * 추상 메서드
+	 * 메서드의 접근제한자(public), 메서드의 이름, 매개변수, return type 만 정의한 것.
+	 * 연산(실행)되는 실제 코드가 없는 method.
+	 */
 	public void loadStudent();
 	public StudentVO[] getStudents();
 	

@@ -11,6 +11,7 @@ public class StudentVO {
 	private String stDept;
 	private String stAddr;
 	// 학생 객체의 추상화 후 정보은닉
+	
 	public String getStNum() {
 		return stNum;
 	}
