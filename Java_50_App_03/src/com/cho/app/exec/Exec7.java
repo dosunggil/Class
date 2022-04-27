@@ -29,6 +29,6 @@ public class Exec7 {
 
 		} // end for i
 
-		System.out.println("배열 intArr 에는 " + (100 - intNum) + "개의 소수가 있습니다.");
+		System.out.println("배열 intArr 에는 " + (intArr.length - intNum) + "개의 소수가 있습니다.");
 	}
 }
