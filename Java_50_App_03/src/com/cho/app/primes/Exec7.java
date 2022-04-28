@@ -1,4 +1,4 @@
-package com.cho.app.exec;
+package com.cho.app.primes;
 
 public class Exec7 {
 
