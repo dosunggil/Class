@@ -18,4 +18,5 @@
 ### List 요소 중에서 정수 55 보다 큰 요소를 골라내기
 * https://github.com/dosunggil/Class/tree/master/Java_50_App_04
 
-### 피자 문제 
+### 피자 문제
+* https://github.com/dosunggil/Class/tree/master/Java_50_App_05
