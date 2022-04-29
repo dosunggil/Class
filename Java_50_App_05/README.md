@@ -9,3 +9,9 @@
 
 * 급여를 최소의 지폐권으로 나누는 문제
 * [Exec2](https://github.com/dosunggil/Class/blob/master/Java_50_App_05/src/com/cho/app/exec/Exec21.java)
+
+# List 를 이용하여 학생들의 성적표 출력하기
+
+* 학생의 국어, 영어 수학 점수를 50~100의 임의의 정수로 저장하고
+* 학생 20명의 리스트를 만들어 출력해보기
+* [service.impl]

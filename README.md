@@ -21,3 +21,4 @@
 
 ### :pizza:[피자 문제](https://github.com/dosunggil/Class/tree/master/Java_50_App_05)
 ### :dollar:[급여 문제](https://github.com/dosunggil/Class/tree/master/Java_50_App_05)
+### :100:[학생 성적 만들기]
