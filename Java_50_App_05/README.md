@@ -8,4 +8,4 @@
 # 급여문제
 
 * 급여를 최소의 지폐권으로 나누는 문제
-* [Exec2]()
+* [Exec2](https://github.com/dosunggil/Class/blob/master/Java_50_App_05/src/com/cho/app/exec/Exec21.java)
