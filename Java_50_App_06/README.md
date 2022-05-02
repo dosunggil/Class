@@ -8,8 +8,8 @@
 
 
 ### 업무 순서
-* 1. [VO클래스]()를 만들어서 데이터를 선언해준다. : ```추상화```
-* 2. [ScoreService 인터페이스]()를 선언한다.
-* 3. 인터페이스를 implements 할 [ScoreServiceImplV1 클래스]() 선언.
+* 1. [VO클래스](https://github.com/dosunggil/Class/blob/master/Java_50_App_06/src/com/cho/app/model/ScoreVO.java)를 만들어서 데이터를 선언해준다. :  ```추상화```
+* 2. [ScoreService 인터페이스](https://github.com/dosunggil/Class/blob/master/Java_50_App_06/src/com/cho/app/service/ScoreService.java)를 선언한다.
+* 3. 인터페이스를 implements 할 [ScoreServiceImplV1 클래스](https://github.com/dosunggil/Class/blob/master/Java_50_App_06/src/com/cho/app/service/impl/ScoreSerivceImplV1.java) 선언.
 * 3-1. ImplV1 에서는 makeScore(), scorePrint() 를 재정의.(주석확인)
 * 4. ImplV2, ImplV3 참고

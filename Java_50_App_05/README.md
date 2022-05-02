@@ -15,4 +15,4 @@
 * 학생의 국어, 영어 수학 점수를 50~100의 임의의 정수로 저장하고
 * 학생 20명의 리스트를 만들어 출력해보기
 * [service.impl](https://github.com/dosunggil/Class/blob/master/Java_50_App_05/src/com/cho/app/service/ScoreService.java)
-* [새로운 프로젝트로 연결]()
+* [새로운 프로젝트로 연결](https://github.com/dosunggil/Class/tree/master/Java_50_App_06)
