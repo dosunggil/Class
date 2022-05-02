@@ -13,3 +13,7 @@
 * 3. 인터페이스를 implements 할 [ScoreServiceImplV1 클래스](https://github.com/dosunggil/Class/blob/master/Java_50_App_06/src/com/cho/app/service/impl/ScoreSerivceImplV1.java) 선언.
 * 3-1. ImplV1 에서는 makeScore(), scorePrint() 를 재정의.(주석확인)
 * 4. ImplV2, ImplV3 참고
+
+
+## 성적의 합계로 성적 정렬하기
+* [Exec]()
