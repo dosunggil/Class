@@ -15,11 +15,11 @@ import lombok.ToString;
 @Builder
 public class ScoreVO {
 	
-	private String stNum;
-	private int intKor;
-	private int intEng;
-	private int intMath;
-	private int intSum;
-	private float fAvg;
+	protected String stNum;
+	protected int intKor;
+	protected int intEng;
+	protected int intMath;
+	protected int intSum;
+	protected float fAvg;
 
 }
