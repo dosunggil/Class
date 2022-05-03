@@ -1,6 +1,7 @@
 # 자바 프로젝트
 * java 오전 수업
 
+### [객체 지향적 코드의 특징](https://github.com/dosunggil/Class/tree/master/Java_50_App_08)
 ##
 
 ### :cow:[문자열형 변수](https://github.com/dosunggil/Class/tree/master/Java_10_Varriable_05)
