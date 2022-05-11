@@ -7,7 +7,7 @@ import com.cho.utils.Line;
 
 public class InputServiceImplV1 implements InputService{
 
-	private final Scanner scan;
+	protected final Scanner scan;
 	
 	public InputServiceImplV1() {
 		this.scan = new Scanner(System.in);
@@ -45,6 +45,22 @@ public class InputServiceImplV1 implements InputService{
 		String content = scan.nextLine();
 		
 		return content;
+	}
+
+	@Override
+	public Integer selectTodo() {
+		System.out.println(Line.dLine(50));
+		System.out.print("할일선택(QUIT:종료)");
+		String selectNum = scan.nextLine();
+		Integer intNum = 0 ;
+		
+		if(selectNum.equals("QUIT")) return -1;
+		try {
+			intNum = Integer.valueOf(selectNum);
+		} catch (Exception e) {
+			return null;
+		}
+		return intNum;
 	}
 
 }
