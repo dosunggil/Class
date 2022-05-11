@@ -103,6 +103,11 @@ public class TodoServiceImplV1 implements TodoService{
 	 */
 	@Override
 	public void compTodo(Integer num) {
+		Date curDate = new Date(System.currentTimeMillis());
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
+		String etoday = dateFormat.format(curDate);
+		String etime = timeFormat.format(curDate);
 		
 	}
 
