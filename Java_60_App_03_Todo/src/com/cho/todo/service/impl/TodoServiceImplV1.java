@@ -103,11 +103,23 @@ public class TodoServiceImplV1 implements TodoService{
 	 */
 	@Override
 	public void compTodo(Integer num) {
-		Date curDate = new Date(System.currentTimeMillis());
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
-		String etoday = dateFormat.format(curDate);
-		String etime = timeFormat.format(curDate);
+		
+		TodoVO tdVO =  todoList.get(num-1);
+		if (tdVO.getEdate() == null) {
+		
+			Date curDate = new Date(System.currentTimeMillis());
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+			SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
+			String etoday = dateFormat.format(curDate);
+			String etime = timeFormat.format(curDate);
+		
+			tdVO.setEdate(etoday);
+			tdVO.setEtime(etime);
+			//todoList.add(num-1, tdVO);
+		} else {
+			tdVO.setEdate(null);
+			tdVO.setEtime(null);
+		}
 		
 	}
 
