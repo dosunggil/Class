@@ -48,7 +48,7 @@ public class TodoControllerV12 {
 						continue;
 					}
 					if (num == -1)
-						return;
+						break;
 					toService.compTodo(num);
 
 				} // end while

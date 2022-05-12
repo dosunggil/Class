@@ -14,7 +14,7 @@ import com.cho.todo.service.TodoService;
 
 public class TodoServiceImplV1 implements TodoService{
 
-	protected final String saveFilename;
+	protected final String saveFileName;
 	protected final List<TodoVO> todoList;
 	
 	public TodoServiceImplV1() {
@@ -23,7 +23,7 @@ public class TodoServiceImplV1 implements TodoService{
 	
 	public TodoServiceImplV1(String saveFileName) {
 		this.todoList = new ArrayList<>();
-		this.saveFilename = saveFileName;
+		this.saveFileName = saveFileName;
 	}
 	
 	/*
@@ -100,7 +100,7 @@ public class TodoServiceImplV1 implements TodoService{
 		FileWriter writer = null;
 		PrintWriter out = null;
 		
-		writer = new FileWriter(saveFilename);
+		writer = new FileWriter(saveFileName);
 		out = new PrintWriter(writer);
 		
 		for(TodoVO vo : todoList) {
