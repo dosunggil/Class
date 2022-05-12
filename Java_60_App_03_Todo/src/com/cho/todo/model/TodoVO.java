@@ -30,6 +30,9 @@ public class TodoVO {
 		String result=String.format("%s\t",tKey);
 		result += String.format("%s\t", sdate);
 		result += String.format("%s\t", stime);
+		result += String.format("%s\t", tContent);
+		result += String.format("%s\t", edate);
+		result += String.format("%s\t", etime);
 
 		// 3항연산
 		// String compStr = edate.isEmpty() ? "진행중" : "완료됨";
@@ -37,7 +40,7 @@ public class TodoVO {
 		// edate == null 이 true 이면 "진행중" 을 저장
 		// 그렇지 않으면 "완료됨" 을 저장
 		// null 이거나 "" 이면
-		String compStr = edate == null || edate.isEmpty() ? "진행중" : "완료됨";
+		String compStr = edate == null || edate.isEmpty() || edate =="null"? "진행중" : "완료됨";
 		/*
 		 * if(edate.isEmpty()) { 
 		 * compStr = "진행중"; 

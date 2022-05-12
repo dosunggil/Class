@@ -1,9 +1,10 @@
 package com.cho.todo.service.impl;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,18 +13,12 @@ import java.util.UUID;
 import com.cho.todo.model.TodoVO;
 import com.cho.todo.service.TodoService;
 
-public class TodoServiceImplV1 implements TodoService{
+public class TodoServiceImplV1111 implements TodoService{
 
-	protected final String saveFilename;
-	protected final List<TodoVO> todoList;
+	private final List<TodoVO> todoList;
 	
-	public TodoServiceImplV1() {
-		this("src/com/cho/todo/model/todolist.txt");
-	}
-	
-	public TodoServiceImplV1(String saveFileName) {
+	public TodoServiceImplV1111() {
 		this.todoList = new ArrayList<>();
-		this.saveFilename = saveFileName;
 	}
 	
 	/*
@@ -96,29 +91,8 @@ public class TodoServiceImplV1 implements TodoService{
 	}
 
 	@Override
-	public void saveTodo(String fileName) throws IOException {
-		FileWriter writer = null;
-		PrintWriter out = null;
-		
-		writer = new FileWriter(saveFilename);
-		out = new PrintWriter(writer);
-		
-		for(TodoVO vo : todoList) {
-			out.printf("%s,",vo.getTKey());
-			out.printf("%s,", vo.getSdate());
-			out.printf("%s,",vo.getStime());
-			out.printf("%s,",vo.getEdate());
-			out.printf("%s,",vo.getEtime());
-			out.printf("%s\n",vo.getTContent());
-		}
-		
-		// buffer 에 남아있는 데이터를 강제로 파일에 기록.
-		out.flush();
-		
-		// 열려있는 파일 resource 를 닫기.
-		// 파일에 저장하는 코드에서는 반드시 마지막에 close 를 해야한다.
-		out.close();
-		writer.close();
+	public void saveTodo(String fileName) {
+		// TODO Auto-generated method stub
 		
 	}
 
@@ -133,30 +107,36 @@ public class TodoServiceImplV1 implements TodoService{
 	 */
 	@Override
 	public void compTodo(Integer num) {
-		Date curDate = new Date(System.currentTimeMillis());
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
-		String etoday = dateFormat.format(curDate);
-		String etime = timeFormat.format(curDate);
+		int index = num -1;
+		
+		// java 1.8 부터 사용하는 새로운 날짜 시간 관련 클래스
+		// Date, Calendar 클래스의 날짜와 관련된 많은 이슈때문에
+		//		새롭게 디자인되고 만들어진 클래스이다.
+		// 객체를 새로 생성하는 것이 아니고
+		//		now() 라는 static method 를 호출하여 쓰는 구조다.
+		LocalDateTime local = LocalDateTime.now();
+		
+		LocalDate localdate = LocalDate.now();
+		LocalTime localtime = LocalTime.now();
+		
+		// 날짜형의 문자열로 변환하기
+		DateTimeFormatter toDateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		DateTimeFormatter toTimeFormat = DateTimeFormatter.ofPattern("hh:mm:ss");
+		
+		String eDate = local.format(toDateFormat);
+		String eTime = local.format(toTimeFormat);
 		
 		try {
-			TodoVO tdVO =  todoList.get(num-1);
-			if (tdVO.getEdate() == null) {
-				
-				tdVO.setEdate(etoday);
-				tdVO.setEtime(etime);
-				// todoList.add(num-1, tdVO);
-				// todoList.set(num-1, tdVO);
-			} else {
-				tdVO.setEdate(null);
-				tdVO.setEtime(null);
-			}
+			TodoVO tVO = todoList.get(index);
 			
+			eDate = tVO.getEdate() == null || tVO.getEdate().isEmpty() ? eDate : null;		
+			eTime = tVO.getEtime() == null || tVO.getEtime().isEmpty() ? eTime : null;		
+			
+			tVO.setEdate(eDate);
+			tVO.setEtime(eTime);
 		} catch (Exception e) {
-			// TODO: handle exception
 			System.out.println("TODO List 데이터 범위를 벗어났습니다.");
 		}
-		
 	}
 
 }
