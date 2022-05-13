@@ -90,7 +90,7 @@ public class TodoServiceImplV1 implements TodoService{
 	}
 
 	@Override
-	public void update(TodoVO tVO) {
+	public void update(Integer num, String content) {
 		// TODO Auto-generated method stub
 		
 	}
