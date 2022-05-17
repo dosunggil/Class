@@ -70,11 +70,10 @@ public class AddrEx05 {
 	System.out.println(Line.dLine(100));
 	
 	int size = adList.size();
-	for(int i = 0 ; i < size ; i ++) {
-		for( int j =0;  j< size-1; j++) {
-		AddressVO instVO = new AddressVO();
-		if(adList.get(i).getAge() < adList.get(j).getAge() ) {
-			instVO = adList.get(i);
+	for(int i = 0 ; i < size-1 ; i ++) {
+		for( int j =i+1;  j< size; j++) {
+		if(adList.get(i).getAge() > adList.get(j).getAge() ) {
+			AddressVO instVO = adList.get(i);
 			adList.set(i, adList.get(j));
 			adList.set(j, instVO);
 		}
