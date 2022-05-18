@@ -44,7 +44,7 @@ public class AddrEx05 {
 	sung.setAddr("광양");
 	sung.setAge(21);
 	sung.setHobby("영화감상");
-	AddressVO lee = AddressVO.builder().name("이몽룡").tel(null).addr(null).age(29).hobby(null).build();
+	AddressVO lee = AddressVO.builder().name("이몽룡").tel(null).addr(null).age(29).hobby("성춘향").build();
 	
 	AddrServiceV1  addService = new  AddrServiceV1 ();
 	//addService.printAddr(hong);
